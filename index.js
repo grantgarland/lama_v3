@@ -12,5 +12,5 @@ function Lama() {
   return <App hideSplashScreen={RNBootSplash.hide} />
 }
 
-AppRegistry.registerComponent("Root", () => Lama)
+AppRegistry.registerComponent("main", () => Lama)
 export default App

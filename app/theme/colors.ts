@@ -1,6 +1,17 @@
-// TODO: write documentation for colors and palette in own markdown file and add links from here
-
 const palette = {
+  // Brand colors
+  ebbBlue: "#81CDD6",
+  ebbGreen: "#5ee667",
+  ebbYellow: "#FDF20C",
+  ebbOrange: "#FF8301",
+  ebbRed: "#FD0B0D",
+  // Tinted variations
+  ebbBlueTint: "#9fd9e0",
+  ebbGreenTint: "#7bea82",
+  ebbYellowTint: "#fdf335",
+  ebbOrangeTint: "#ff9c33",
+  ebbRedTint: "#fd3535",
+
   neutral100: "#FFFFFF",
   neutral200: "#F4F2F1",
   neutral300: "#D7CEC9",

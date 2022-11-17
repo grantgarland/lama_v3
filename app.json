@@ -1,0 +1,56 @@
+{
+  "name": "Lama",
+  "displayName": "Lama",
+  "expo": {
+    "name": "Lama",
+    "slug": "Lama",
+    "description": "Language Memory Assistant",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#81CDD6"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "jsEngine": "hermes",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "icon": "./assets/icon.png",
+      "package": "com.helloworld",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/app-icon-android-adaptive-foreground.png",
+        "backgroundImage": "./assets/images/app-icon-android-adaptive-background.png"
+      },
+      "splash": {
+        "image": "./assets/splash.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#81CDD6"
+      }
+    },
+    "ios": {
+      "icon": "./assets/icon.png",
+      "supportsTablet": false,
+      "bundleIdentifier": "com.tryLama.Lama",
+      "splash": {
+        "image": "./assets/splash.png",
+        "tabletImage": "./assets/splash.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#81CDD6"
+      }
+    },
+    "web": {
+      "favicon": "./assets/icon.png",
+      "splash": {
+        "image": "./assets/splash.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#81CDD6"
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+workflows:
+  react-native:
+    name: Lama_v3
+    instance_type: mac_mini_m1
+    max_build_duration: 60
+    environment:
+      node: 16.18.1
+      npm: latest
+      flutter: stable
+      xcode: latest
+      groups:
+        - group_name
+      vars:
+        PUBLIC_ENV_VAR: "value here"
+    cache:
+      cache_paths:
+        - ~/.pub-cache
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: "*"
+          include: true
+          source: true
+      cancel_previous_builds: true
+    scripts:
+      - name: Install dependencies
+        script: npm install
+      - name: Run tests
+        script: npm test
+    artifacts:
+      - build/**/outputs/bundle/**/*.aab
+    publishing:
+      email:
+        recipients:
+          - hello@grantcgarland.com
+      scripts:
+        - echo 'Post-publish script'

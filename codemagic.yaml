@@ -8,8 +8,6 @@ workflows:
       npm: latest
       flutter: stable
       xcode: latest
-      groups:
-        - group_name
       vars:
         PUBLIC_ENV_VAR: "value here"
     cache:

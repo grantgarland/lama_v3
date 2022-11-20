@@ -1,23 +1,17 @@
 workflows:
   react-native-ios:
     name: Lama_v3 iOS
-    instance_type: mac_mini_m1
     max_build_duration: 120
     environment:
+      vars:
+        BUNDLE_ID: "com.tryLama.Lama"
+        XCODE_WORKSPACE: "HelloWorld.xcworkspace"
+        XCODE_SCHEME: "HelloWorld"
+        APP_ID: 1527028000
       node: 16.18.1
       npm: latest
       flutter: stable
       xcode: latest
-      groups:
-        - group_name
-      vars:
-        BUNDLE_ID: "com.tryLama.Lama"
-        XCODE_WORKSPACE: "HelloWorld.xcworkspace" # <-- Put the name of your Xcode workspace here
-        XCODE_SCHEME: "HelloWorld" # <-- Put the name of your Xcode scheme here
-        APP_ID: 1527028000
-      ios_signing:
-        distribution_type: app_store
-        bundle_identifier: com.tryLama.Lama
     cache:
       cache_paths:
         - ~/.pub-cache
@@ -64,18 +58,7 @@ workflows:
       email:
         recipients:
           - hello@grantcgarland.com
-      scripts:
-        - echo 'Post-publish script'
       app_store_connect:
-        auth: integration
-
         # Configuration related to TestFlight (optional)
         # Note: This action is performed during post-processing.
         submit_to_testflight: true
-        beta_groups: # Specify the names of beta tester groups that will get access to the build once it has passed beta review.
-          - App Store Connect Users
-          - Internal testers
-
-        # Configuration related to App Store (optional)
-        # Note: This action is performed during post-processing.
-        submit_to_app_store: false
